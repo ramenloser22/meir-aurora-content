@@ -5,10 +5,10 @@
     <description>Custom content for the world of Meir.</description>
     <author url="https://github.com/ramenloser22">ramenloser22</author>
     <update version="1.0.0">
-      <file name="user.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user.index" />
+      <file name="user.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen.index" />
     </update>
   </info>
   <files>
-    <file name="a-mortals-guide-to-meir.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user/a-mortals-guide-to-meir.index" />
+    <file name="a-mortals-guide-to-meir.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen/a-mortals-guide-to-meir.index" />
   </files>
 </index>
