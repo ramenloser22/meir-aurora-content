@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <name>A Mortal's Guide To Meir</name>
+    <description>Homebrew expansion for the world of Meir, containing new content of all kinds.</description>
+    <author url="https://github.com/ramenloser22">ramenloser22</author>
+    <update version="1.0.0">
+      <file name="core/a-mortals-guide-to-meir.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir.index" />
+    </update>
+  </info>
+  <files>
+    <file name="core/a-mortals-guide-to-meir/source.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/source.xml" />
+    <!-- races -->
+    <file name="core/a-mortals-guide-to-meir/races/race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-abolethspawn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-alienbugspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-alienbugspawn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-alithimar.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-alithimar.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-braineaterspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-braineaterspawn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-centaurborn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-centaurborn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-cursedarcanistspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-cursedarcanistspawn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-douleimar.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-douleimar.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-eifemar.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-eifemar.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-feypantherborn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-feypantherborn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-galinimar.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-galinimar.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-gierling.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-gierling.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-grauling.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-grauling.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfangel.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfangel.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfbear.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfbear.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfcat.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfcat.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfcrow.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfcrow.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfdwarf.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfdwarf.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfforestgiant.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfforestgiant.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfgiant.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfgiant.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfgnome.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfgnome.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfgoblin.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfgoblin.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfhob.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfhob.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfkobold.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfkobold.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halflizard.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halflizard.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfmer.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfmer.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halfsnake.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halfsnake.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-halftiefling.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-halftiefling.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-haosling.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-haosling.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-heltomar.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-heltomar.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-ketteling.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-ketteling.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-medusaborn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-medusaborn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-oneeyedballspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-oneeyedballspawn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-owlbearborn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-owlbearborn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-quarterling.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-quarterling.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-spacetoadspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-spacetoadspawn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-sphinxborn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-sphinxborn.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-streitling.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-streitling.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-thirimar.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-thirimar.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-verrucktling.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-verrucktling.xml" />
+    <file name="core/a-mortals-guide-to-meir/races/race-yetiborn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-yetiborn.xml" />
+  </files>
+</index>
