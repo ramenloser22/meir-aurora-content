@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <race name="Half-Kobold" source="MGtM">
+    <description>
+      <!-- Describe the Half-Kobold race here -->
+    </description>
+    <!-- Add traits, ability score increases, and other features here -->
+  </race>
+</elements>
