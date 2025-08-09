@@ -5,7 +5,7 @@
     <description>Custom content for the world of Meir.</description>
     <author url="https://github.com/ramenloser22">ramenloser22</author>
     <update version="1.0.0">
-      <file name="core.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core.index" />
+      <file name="core.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/refs/heads/main/elements/master/core.index" />
     </update>
   </info>
   <files>
