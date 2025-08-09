@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<update version="0.0.2">
-			<file name="source.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/source.xml" />
+			<file name="source.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/refs/heads/main/elements/master/core/a-mortals-guide-to-meir/source.xml" />
 		</update>
 	</info>
 	<element name="A Mortal's Guide to Meir" type="Source" source="A Mortal's Guide to Meir" id="ID_AMGM_SOURCE">
