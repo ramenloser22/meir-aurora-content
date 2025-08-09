@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <race name="Owlbear-Born" source="MGtM">
+    <description>
+      <!-- Describe the Owlbear-Born race here -->
+    </description>
+    <!-- Add traits, ability score increases, and other features here -->
+  </race>
+</elements>
