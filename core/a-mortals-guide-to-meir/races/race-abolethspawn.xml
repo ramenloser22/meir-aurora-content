@@ -3,7 +3,7 @@
 	<info>
 		<name>Aboleth Spawn</name>
 		<update version="0.2.2">
-			<file name="race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/race-abolethspawn.xml" />
+			<file name="race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-abolethspawn.xml" />
 		</update>
 	</info>
 
