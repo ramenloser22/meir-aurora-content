@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<update version="0.0.2">
+			<file name="a-mortals-guide-to-meir.xml" url="https://github.com/ramenloser22/meir-aurora-content/blob/main/a-mortals-guide-to-meir.xml" />
+		</update>
+	</info>
+	<element name="A Mortal's Guide to Meir" type="Source" source="A Mortal's Guide to Meir" id="ID_AMGM_SOURCE">
+		<description>
+			<![CDATA[
+			<p><strong>Your guide to the unique world of Meir!</strong></p>
+			<p>A Mortal's Guide to Meir contains everything you need to create and play characters in the setting of Meir. This includes new races, classes, backgrounds, lore, and the unique rules that shape the world.</p>
+			<p>Explore strange lands, uncover ancient secrets, and forge your own legend in a setting where mortals shape the fate of gods.</p>
+			]]>
+		</description>
+		<setters>
+			<set name="abbreviation">AMGM</set>
+			<set name="url">https://github.com/ramenloser22/meir-aurora-content</set>
+			<set name="image">https://github.com/ramenloser22/meir-aurora-content/raw/main/images/a-mortals-guide-to-meir.png</set>
+			<set name="author" url="https://github.com/ramenloser22">ramenloser22</set>
+			<set name="official">false</set>
+			<set name="core">false</set>
+			<set name="release">20250809</set>
+		</setters>
+	</element>
+</elements>
