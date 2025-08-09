@@ -9,7 +9,7 @@
     </update>
   </info>
   <files>
-    <file name="source.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/source.xml" />
+    <obsolete name="source.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/source.xml" />
     <!-- races -->
     <file name="race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/race-abolethspawn.xml" />
     <!-- Add more content files here as needed -->
