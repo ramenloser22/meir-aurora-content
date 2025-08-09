@@ -16,10 +16,9 @@
 		<setters>
 			<set name="abbreviation">MGtM</set>
 			<set name="url">https://github.com/ramenloser22/meir-aurora-content</set>
-			<set name="image">https://github.com/ramenloser22/meir-aurora-content/raw/main/images/a-mortals-guide-to-meir.png</set>
 			<set name="author" abbreviation="PB" url="https://github.com/ramenloser22">ramenloser22</set>
 			<set name="official">true</set>
-			<set name="core">trie</set>
+			<set name="core">true</set>
 			<set name="release">20250809</set>
 		</setters>
 	</element>
