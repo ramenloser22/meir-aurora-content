@@ -1,4 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
 <index>
-  <file name="race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/race-abolethspawn.xml" />
-  <!-- Add more custom race files here as needed -->
+  <info>
+    <name>A Mortal's Guide To Meir</name>
+    <description>Custom content for the world of Meir.</description>
+    <author url="https://github.com/ramenloser22">ramenloser22</author>
+    <update version="1.0.0">
+      <file name="a-mortals-guide-to-meir.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/a-mortals-guide-to-meir.index" />
+    </update>
+  </info>
+  <files>
+    <file name="a-mortals-guide-to-meir.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/a-mortals-guide-to-meir.index" />
+  </files>
 </index>
