@@ -9,7 +9,7 @@
     </update>
   </info>
   <files>
-    <file name="source.xml" url="source.xml" />
+    <file name="source.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/a-mortals-guide-to-meir.index" />
     <!-- races -->
     <file name="race-half-angel.xml" url="races/race-half-angel.xml" />
     <file name="race-half-bear.xml" url="races/race-half-bear.xml" />
