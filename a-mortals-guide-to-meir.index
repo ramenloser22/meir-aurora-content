@@ -1,1 +1,31 @@
-<content of a-mortals-guide-to-meir.index>
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <name>A Mortal's Guide to Meir</name>
+    <description>The Mortal's Guide to Meir contains unique races, backgrounds, and more for your campaign setting.</description>
+    <author url="https://github.com/ramenloser22">ramenloser22</author>
+    <update version="1.0">
+      <file name="a-mortals-guide-to-meir.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/a-mortals-guide-to-meir.index" />
+    </update>
+  </info>
+  <files>
+    <file name="source.xml" url="source.xml" />
+    <!-- races -->
+    <file name="race-half-angel.xml" url="races/race-half-angel.xml" />
+    <file name="race-half-bear.xml" url="races/race-half-bear.xml" />
+    <file name="race-half-cat.xml" url="races/race-half-cat.xml" />
+    <file name="race-half-crow.xml" url="races/race-half-crow.xml" />
+    <file name="race-half-dwarf.xml" url="races/race-half-dwarf.xml" />
+    <file name="race-half-forest-giant.xml" url="races/race-half-forest.xml" />
+    <file name="race-half-giant.xml" url="races/race-half-giant.xml" />
+    <file name="race-half-gnome.xml" url="races/race-half-gnome.xml" />
+    <file name="race-half-goblin.xml" url="races/race-half-goblin.xml" />
+    <file name="race-half-hob.xml" url="races/race-half-hob.xml" />
+    <file name="race-half-kobold.xml" url="races/race-half-kobold.xml" />
+    <file name="race-half-lizard.xml" url="races/race-half-lizard.xml" />
+    <file name="race-half-mer.xml" url="races/race-half-mer.xml" />
+    <file name="race-half-snake.xml" url="races/race-half-snake.xml" />
+    <file name="race-half-tiefling.xml" url="races/race-half-tiefling.xml" />
+    <file name="race-quarterling.xml" url="races/race-quarterling.xml" />
+  </files>
+</index>
