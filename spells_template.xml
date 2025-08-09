@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <info>
+    <name>Meir: Spells</name>
+    <update version="1.0">
+      <file name="spells.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/spells.xml" />
+    </update>
+  </info>
+  <!--
+    Add your spell definitions here.
+    Example:
+    <spell name="Example Spell" ...>
+      ...
+    </spell>
+  -->
+</elements>
