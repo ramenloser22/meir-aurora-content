@@ -11,7 +11,7 @@
   <files>
     <file name="core/a-mortals-guide-to-meir/source.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/source.xml" />
     <!-- races -->
-    <file name="core/a-mortals-guide-to-meir/races/race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-abolethspawn.xml" />
+    <file name="race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-abolethspawn.xml" />
     <!-- Add more content files here as needed -->
   </files>
 </index>
