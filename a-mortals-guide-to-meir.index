@@ -9,7 +9,7 @@
     </update>
   </info>
   <files>
-    <file name="core/a-mortals-guide-to-meir/source.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/source.xml" />
+    <file name="source.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/source.xml" />
     <!-- races -->
     <file name="race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir/races/race-abolethspawn.xml" />
     <!-- Add more content files here as needed -->
