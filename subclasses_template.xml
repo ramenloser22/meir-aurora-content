@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <info>
+    <name>Meir: Subclasses</name>
+    <update version="1.0">
+      <file name="subclasses.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/subclasses.xml" />
+    </update>
+  </info>
+  <!--<
+    Add your subclass definitions here.
+    Example:
+    <subclass name="Example Subclass" ...>
+      ...
+    </subclass>
+  -->
+</elements>
