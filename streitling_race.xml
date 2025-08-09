@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <race name="Streitling" source="MGtM">
+    <description>
+      <!-- Describe the Streitling race here -->
+    </description>
+    <!-- Add traits, ability score increases, and other features here -->
+  </race>
+</elements>
