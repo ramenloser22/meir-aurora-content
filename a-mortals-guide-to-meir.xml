@@ -16,6 +16,8 @@
 		<setters>
 			<set name="abbreviation">MGtM</set>
 			<set name="url">https://github.com/ramenloser22/meir-aurora-content</set>
+			<set name="image">https://media.dnd.wizards.com/styles/product_tabletop_left/public/images/product/DnD_PHB.png</set>
+			<set name="errata">https://media.wizards.com/2020/dnd/downloads/PH-Errata.pdf</set>
 			<set name="author" abbreviation="PB" url="https://github.com/ramenloser22">ramenloser22</set>
 			<set name="official">true</set>
 			<set name="core">true</set>
