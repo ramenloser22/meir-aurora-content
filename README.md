@@ -1,0 +1,2 @@
+# meir-aurora-content
+AURORA CONTENT FOR A MORTAL'S GUIDE TO MEIR
