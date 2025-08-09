@@ -1,9 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <elements>
-  <race name="Aboleth Spawn" source="MGtM">
-    <description>
-      <!-- Describe the Aboleth Spawn race here -->
-    </description>
-    <!-- Add traits, ability score increases, and other features here -->
-  </race>
+	<info>
+		<name>Aboleth Spawn</name>
+		<update version="0.2.2">
+			<file name="race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/race-abolethspawn.xml" />
+		</update>
+	</info>
+
+	<element name="Aboleth Spawn" type="Race" source="A Mortal's Guide to Meir" id="ID_RACE_ABOLETHSPAWN">
+		<description>
+			<p class="flavor">An aboleth was an ancient creature that ruled the primordial seas before the gods walked the planes. These creatures delighted in using their mental powers to enslave lesser beings. An aboleth spawn is a humanoid who carries within them a sliver of an aboleth's essence, giving them the aboleth's affinity for water and some of their mental ability. They might feel the desire to rule, as their primordial forbearers did, or the humanoid part of them might feel remorse for the weight of misdeeds from eons past.</p>
+			<h4>ABOLETH SPAWN TRAITS</h4>
+			<p>Aboleth spawn share certain racial traits as a result of their eldritch heritage.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence or Charisma score increases by 2, and your Strength score increases by 1.</p>
+			<p class="indent"><strong><em>Alignment.</em></strong> Aboleth spawn may or may not be evil, but they have a strong tendency toward lawful alignments.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Aboleth spawn are similar in size and build to humans. Your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
+			<p class="indent"><strong><em>Amphibious.</em></strong> You can breathe air and water.</p>
+			<p class="indent"><strong><em>Eternal Memory.</em></strong> You are proficient in the History skill.</p>
+			<p class="indent"><strong><em>Aboleth Magic.</em></strong> At 3rd level, you can cast the <em>charm person</em> spell once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Intelligence or Charisma is your spellcasting ability for this spell (choose when you select this race).</p>
+			<p class="indent"><strong><em>Telepathy.</em></strong> You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time.</p>
+			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write two languages of your choice.</p>
+			</description>
+			<sheet display="false" />
+			<setters>
+				<set name="height" modifier="2d8">5'0"</set>
+				<set name="weight" modifier="2d4">120 lb.</set>
+			</setters>
+			<rules>
+				<select name="Aboleth Spawn Ability Score Increase" type="Ability Score" supports="intelligence,charisma" required="true">
+					<option name="Intelligence +2"/>
+					<option name="Charisma +2"/>
+				</select>
+				<stat name="strength" value="1"/>
+				<stat name="innate speed" value="30" bonus="base"/>
+				<grant type="Size" id="ID_SIZE_MEDIUM" />
+				<grant type="Vision" id="ID_VISION_DARKVISION_120" />
+				<grant type="Skill Proficiency" id="ID_SKILL_HISTORY" />
+				<grant type="Language" id="ID_LANGUAGE_CHOICE" count="2"/>
+				<grant type="Racial Trait" id="ID_RACIAL_TRAIT_AMPHIBIOUS" />
+				<grant type="Racial Trait" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC" />
+				<grant type="Racial Trait" id="ID_RACIAL_TRAIT_TELEPATHY" />
+			</rules>
+		</element>
+
+	<element name="Amphibious" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_AMPHIBIOUS">
+		<description>
+			<p>You can breathe air and water.</p>
+		</description>
+		<sheet>
+			<description>You can breathe air and water.</description>
+		</sheet>
+	</element>
+
+	<element name="Aboleth Magic" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC">
+		<description>
+			<p>At 3rd level, you can cast the <em>charm person</em> spell once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Intelligence or Charisma is your spellcasting ability for this spell (choose when you select this race).</p>
+		</description>
+		<sheet>
+			<description level="3">You can cast <em>charm person</em> (1/long rest). Use Intelligence or Charisma (chosen at character creation) as your spellcasting ability.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_SPELL_CHARM_PERSON" level="3"/>
+		</rules>
+	</element>
+
+	<element name="Telepathy" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_TELEPATHY">
+		<description>
+			<p>You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time.</p>
+		</description>
+		<sheet>
+			<description>Speak telepathically to one creature within 30 feet that shares a language with you.</description>
+		</sheet>
+	</element>
 </elements>
