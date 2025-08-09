@@ -5,7 +5,7 @@
     <description>Homebrew expansion for the world of Meir, containing new content of all kinds.</description>
     <author url="https://github.com/ramenloser22">ramenloser22</author>
     <update version="1.0.0">
-      <file name="a-mortals-guide-to-meir.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/core/a-mortals-guide-to-meir.index" />
+      <file name="a-mortals-guide-to-meir.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/refs/heads/main/elements/master/core/a-mortals-guide-to-meir.index" />
     </update>
   </info>
   <files>
