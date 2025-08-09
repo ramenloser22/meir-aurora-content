@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<index>
+  <info>
+    <name>A Mortal's Guide to Meir</name>
+    <update version="1.0">
+      <file name="a-mortals-guide-to-meir.index" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/a-mortals-guide-to-meir.index" />
+    </update>
+  </info>
+  <files>
+    <file name="races.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/races.xml" />
+    <file name="classes.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/classes.xml" />
+    <file name="subclasses.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/subclasses.xml" />
+    <file name="spells.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/spells.xml" />
+    <file name="backgrounds.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/backgrounds.xml" />
+    <file name="items.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/items.xml" />
+  </files>
+</index>
