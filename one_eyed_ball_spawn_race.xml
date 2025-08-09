@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+  <race name="One-Eyed Ball Spawn" source="MGtM">
+    <description>
+      <!-- Describe the One-Eyed Ball Spawn race here -->
+    </description>
+    <!-- Add traits, ability score increases, and other features here -->
+  </race>
+</elements>
