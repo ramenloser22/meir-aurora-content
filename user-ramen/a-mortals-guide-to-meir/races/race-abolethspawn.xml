@@ -36,7 +36,7 @@
 				<stat name="strength" value="1"/>
 				<stat name="innate speed" value="30" bonus="base"/>
 				<grant type="Size" id="ID_SIZE_MEDIUM" />
-				<grant type="Vision" id="ID_VISION_DARKVISION_120" />
+				<grant type="Vision" id="ID_VISION_DARKVISION" />
 				<grant type="Skill Proficiency" id="ID_SKILL_HISTORY" />
 				<grant type="Language" id="ID_LANGUAGE_CHOICE" count="2"/>
 				<grant type="Racial Trait" id="ID_RACIAL_TRAIT_AMPHIBIOUS" />
