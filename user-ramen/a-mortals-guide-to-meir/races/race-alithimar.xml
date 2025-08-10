@@ -26,22 +26,17 @@
     <sheet display="false" />
 
     <rules>
-        <!-- Ability Scores -->
         <stat name="strength" value="2" />
         <stat name="constitution" value="1" />
 
-        <!-- Size & Speed -->
         <grant type="Size" id="ID_SIZE_MEDIUM" />
         <stat name="innate speed" value="30" bonus="base" />
 
-        <!-- Vision -->
         <grant type="Vision" id="ID_VISION_DARKVISION" />
 
-        <!-- Racial Traits -->
         <grant type="Racial Trait" id="ID_RACIAL_TRAIT_STRICT_MORAL_CODE" />
         <grant type="Racial Trait" id="ID_RACIAL_TRAIT_GATHERED_TO_BATTLE" />
 
-        <!-- Languages -->
         <grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
         <select type="Language" name="Language (Alithimar)" supports="Standard||Exotic" number="2" />
     </rules>
@@ -66,11 +61,8 @@
         <description>Proficiency in light and medium armor; two martial weapons of choice.</description>
     </sheet>
     <rules>
-        <!-- Correct Mountain Dwarf Armor Proficiency IDs -->
         <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
         <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
-
-        <!-- Weapon choice: two martial weapons -->
         <select type="Proficiency" name="Martial Weapon (Alithimar)" supports="Weapon||Martial" number="2" />
     </rules>
 </element>
