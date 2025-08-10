@@ -46,6 +46,7 @@
             <grant type="Language" id="ID_LANGUAGE_CHOICE" count="2"/>
         </rules>
     </element>
+
     <element name="Amphibious" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_AMPHIBIOUS">
         <description>
             <p>You can breathe air and water.</p>
@@ -53,8 +54,8 @@
         <sheet>
             <description>You can breathe air and water.</description>
         </sheet>
-         </rules>
     </element>
+
     <element name="Eternal Memory" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_ETERAL_MEMORY">
         <description>
             <p>You are proficient in the History skill.</p>
@@ -63,9 +64,10 @@
             <description>You are proficient in the History skill.</description>
         </sheet>
         <rules>
-            <grant type="Skill Proficiency" id="ID_PROFICIENCY_SKILL_HISTORY"/>
+            <grant type="Skill Proficiency" id="ID_SKILL_HISTORY"/>
         </rules>
     </element>
+
     <element name="Aboleth Magic" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC">
         <description>
             <p>At 3rd level, you can cast the <em>charm person</em> spell once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Intelligence or Charisma is your spellcasting ability for this spell (choose when you select this race).</p>
@@ -77,6 +79,7 @@
             <grant type="Spell" id="ID_SPELL_CHARM_PERSON" level="3"/>
         </rules>
     </element>
+
     <element name="Telepathy" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_TELEPATHY">
         <description>
             <p>You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time.</p>
