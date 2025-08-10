@@ -1,9 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
-  <race name="Centaur-Born" source="MGtM">
-    <description>
-      <!-- Describe the Centaur-Born race here -->
-    </description>
-    <!-- Add traits, ability score increases, and other features here -->
-  </race>
+<info>
+<name>Centaur-Born</name>
+<update version="1.0">
+<file name="race-centaurborn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen/a-mortals-guide-to-meir/races/race-centaurborn.xml" />
+</update>
+</info>
+
+<!-- Main Race -->
+<element name="Centaur-Born" type="Race" source="A Mortal's Guide to Meir" id="ID_RACE_CENTAUR_BORN">
+    <description><![CDATA[
+<p class="flavor">The noble centaurs, part humanoid and part horse, roamed the lands of Meir in ages past. A centaur-born inherits the speed and strength of these glorious ancestors.</p>
+
+<h4>CENTAUR-BORN TRAITS</h4>
+<p>Your centaur-born character has the following racial traits.</p>
+
+<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength score increases by 2. Choose a subrace to determine which ability (Dexterity or Constitution) increases by 1.</p>
+<p class="indent"><strong><em>Alignment.</em></strong> Centaur-born may or may not be good, but they have a strong tendency toward neutral alignments.</p>
+<p class="indent"><strong><em>Centaur's Speed.</em></strong> Your base walking speed is 40 feet.</p>
+<p class="indent"><strong><em>Centaur's Strength.</em></strong> You are proficient in Athletics.</p>
+<p class="indent"><strong><em>Charge.</em></strong> If you move at least 20 feet straight toward a creature and then hit it with a melee attack on the same turn, the target must succeed on a Strength saving throw (DC = 8 + your proficiency bonus + your Strength modifier) or be knocked prone. If the target is knocked prone, you can make another melee attack against the target as a bonus action.</p>
+<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write two languages of your choice.</p>
+    ]]></description>
+
+    <sheet display="false" />
+
+    <rules>
+        <!-- Base Ability Score -->
+        <stat name="strength" value="2" />
+
+        <!-- Size & Speed -->
+        <grant type="Size" id="ID_SIZE_MEDIUM" />
+        <stat name="innate speed" value="40" bonus="base" />
+
+        <!-- Traits -->
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_CENTAURS_STRENGTH" />
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_CHARGE" />
+
+        <!-- Language Choice -->
+        <select type="Language" name="Language (Centaur-Born)" supports="Standard||Exotic" number="2" />
+
+        <!-- Subrace Selector -->
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_CENTAUR_SUBRACE" />
+    </rules>
+</element>
+
+<!-- Subrace Selector Trait -->
+<element name="Centaur-Born Subrace" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_CENTAUR_SUBRACE">
+    <description><![CDATA[
+<p>Choose one Centaur-Born subrace. This determines which secondary ability increases by 1.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <select type="Sub Race" name="Centaur-Born Subrace" supports="Centaur-Born" />
+    </rules>
+</element>
+
+<!-- Subrace: Dexterity -->
+<element name="Centaur-Born (Dexterity)" type="Sub Race" source="A Mortal's Guide to Meir" id="ID_SUB_RACE_CENTAURBORN_DEX">
+    <supports>Centaur-Born</supports>
+    <description><![CDATA[
+<p>As a Dexterity-focused centaur-born, your quick reflexes and agility reflect your heritage.</p>
+<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Dexterity score increases by 1.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="dexterity" value="1" />
+    </rules>
+</element>
+
+<!-- Subrace: Constitution -->
+<element name="Centaur-Born (Constitution)" type="Sub Race" source="A Mortal's Guide to Meir" id="ID_SUB_RACE_CENTAURBORN_CON">
+    <supports>Centaur-Born</supports>
+    <description><![CDATA[
+<p>As a Constitution-focused centaur-born, your endurance and durability reflect your heritage.</p>
+<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 1.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="constitution" value="1" />
+    </rules>
+</element>
+
+<!-- Trait: Centaur's Strength -->
+<element name="Centaur's Strength" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_CENTAURS_STRENGTH">
+    <description><![CDATA[
+<p>You are proficient in Athletics.</p>
+    ]]></description>
+    <sheet>
+        <description>Proficiency in Athletics.</description>
+    </sheet>
+    <rules>
+        <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ATHLETICS" />
+    </rules>
+</element>
+
+<!-- Trait: Charge -->
+<element name="Charge" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_CHARGE">
+    <description><![CDATA[
+<p>If you move at least 20 feet straight toward a creature and then hit it with a melee attack on the same turn, the target must succeed on a Strength saving throw (DC = 8 + your proficiency bonus + your Strength modifier) or be knocked prone. If the target is knocked prone, you can make another melee attack against the target as a bonus action.</p>
+    ]]></description>
+    <sheet>
+        <description>Charge — move 20 ft. before melee hit, target Str save DC (8 + prof bonus + Str mod) or prone; if prone, make a bonus melee attack.</description>
+    </sheet>
+</element>
 </elements>
