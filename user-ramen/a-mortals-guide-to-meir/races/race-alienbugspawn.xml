@@ -27,8 +27,8 @@
     <rules>
       <stat name="dexterity" value="2" />
       <stat name="charisma" value="1" />
-      <stat name="innate speed:walk" value="30" bonus="base" />
-      <stat name="innate speed:climb" value="30" bonus="base" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<stat name="innate speed:climb" value="30" bonus="base" />
       <grant type="Vision" id="ID_VISION_DARKVISION" />
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_MENTAL_FORTITUDE" />
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_CHILD_OF_SLAVERS" />
