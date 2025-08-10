@@ -2,9 +2,7 @@
 <elements>
   <info>
     <name>Alithimar</name>
-    <update version="0.1">
-      <file name="race-alithimar.xml" url="https://raw.githubusercontent.com/yourusername/yourrepo/main/race-alithimar.xml" />
-    </update>
+    <update version="0.1" />
   </info>
 
   <element name="Alithimar" type="Race" source="A Mortal's Guide to Meir" id="ID_RACE_ALITHIMAR">
@@ -56,5 +54,8 @@
       <select type="Proficiency" name="Martial Weapon Proficiency (Alithimar)" supports="Weapon:Martial" number="2" />
     </rules>
   </element>
+
+</elements>
+
 
 </elements>
