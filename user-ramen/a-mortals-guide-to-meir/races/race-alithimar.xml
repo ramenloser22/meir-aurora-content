@@ -9,7 +9,7 @@
 
 <!-- Main Race -->
 <element name="Alithimar" type="Race" source="A Mortal's Guide to Meir" id="ID_RACE_ALITHIMAR">
-    <description>
+    <description><![CDATA[
 <p class="flavor">The alithimar represent the lawful goodness of the upper plane where blessed warriors dwell. Imbued with this righteous zeal, they are often found fighting the forces of chaos in defense of the innocent.</p>
 
 <h4>ALITHIMAR TRAITS</h4>
@@ -21,7 +21,7 @@
 <p class="indent"><strong><em>Strict Moral Code.</em></strong> You refuse to act contrary to your values and alignment. You have advantage on saving throws against being charmed or possessed.</p>
 <p class="indent"><strong><em>Gathered to Battle.</em></strong> You have proficiency in light and medium armor and in two martial weapons of your choice.</p>
 <p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Celestial and two other languages of your choice.</p>
-    </description>
+    ]]></description>
 
     <sheet display="false" />
 
@@ -49,9 +49,9 @@
 
 <!-- Trait: Strict Moral Code -->
 <element name="Strict Moral Code" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_STRICT_MORAL_CODE">
-    <description>
+    <description><![CDATA[
 <p>You refuse to act contrary to your values and alignment. You have advantage on saving throws against being charmed or possessed.</p>
-    </description>
+    ]]></description>
     <sheet>
         <description>Advantage on saving throws vs. charm or possession.</description>
     </sheet>
@@ -59,14 +59,14 @@
 
 <!-- Trait: Gathered to Battle -->
 <element name="Gathered to Battle" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_GATHERED_TO_BATTLE">
-    <description>
+    <description><![CDATA[
 <p>You have proficiency in light and medium armor and in two martial weapons of your choice.</p>
-    </description>
+    ]]></description>
     <sheet>
         <description>Proficiency in light and medium armor; two martial weapons of choice.</description>
     </sheet>
     <rules>
-        <!-- Correct IDs from Mountain Dwarf -->
+        <!-- Correct Mountain Dwarf Armor Proficiency IDs -->
         <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
         <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
 
@@ -74,7 +74,4 @@
         <select type="Proficiency" name="Martial Weapon (Alithimar)" supports="Weapon||Martial" number="2" />
     </rules>
 </element>
-</elements>
-
-	</element>
 </elements>
