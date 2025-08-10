@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Aboleth Spawn</name>
-		<update version="0.3">
+		<update version="0.4">
 			<file name="race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen/a-mortals-guide-to-meir/races/race-abolethspawn.xml" />
 		</update>
 	</info>
@@ -14,8 +14,10 @@
 			<h4>ABOLETH SPAWN TRAITS</h4>
 			<p>Your aboleth spawn character has the following traits.</p>
 			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength score increases by 1. Choose a subrace to determine which ability (Intelligence or Charisma) increases by 2.</p>
+			<p class="indent"><strong><em>Age.</em></strong> Aboleth spawn mature at a similar rate to humans; their lifespan is comparable to humans as well.</p>
 			<p class="indent"><strong><em>Alignment.</em></strong> Aboleth spawn may or may not be evil, but they have a strong tendency toward lawful alignments.</p>
-			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet. You have a swimming speed equal to your walking speed.</p>
+			<p class="indent"><strong><em>Size.</em></strong> Aboleth spawn are about the same size as humans. Your size is Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet. You also have a swimming speed equal to your walking speed.</p>
 			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
 			<p class="indent"><strong><em>Amphibious.</em></strong> You can breathe air and water.</p>
 			<p class="indent"><strong><em>Eternal Memory.</em></strong> You are proficient in History.</p>
@@ -35,9 +37,9 @@
 			<!-- Base +1 Strength (subraces supply the +2) -->
 			<stat name="strength" value="1" />
 
-			<!-- Movement -->
+			<!-- Movement: walk + swim -->
 			<stat name="innate speed" value="30" bonus="base" />
-			<stat name="swim speed" value="30" />
+			<stat name="innate speed:swim" value="30" bonus="base" />
 
 			<!-- Size, Vision, Language -->
 			<grant type="Size" id="ID_SIZE_MEDIUM" />
@@ -130,7 +132,6 @@
 		</sheet>
 		<rules>
 			<grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" />
-			<!-- attempt to set spellcasting ability so Aurora links the spell to Intelligence -->
 			<stat name="spellcasting.ability" value="intelligence" />
 		</rules>
 	</element>
@@ -146,7 +147,6 @@
 		</sheet>
 		<rules>
 			<grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" />
-			<!-- attempt to set spellcasting ability so Aurora links the spell to Charisma -->
 			<stat name="spellcasting.ability" value="charisma" />
 		</rules>
 	</element>
