@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <elements>
   <info>
     <name>Alithimar</name>
     <update version="0.1">
-      <file name="race-alithimar.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen/a-mortals-guide-to-meir/races/race-alithimar.xml" />
+      <file name="race-alithimar.xml" url="https://raw.githubusercontent.com/yourusername/yourrepo/main/race-alithimar.xml" />
     </update>
   </info>
 
@@ -13,10 +13,10 @@
       <h4>ALITHIMAR TRAITS</h4>
       <p>Your alithimar character has the following traits.</p>
       <p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength score increases by 2, and your Constitution score increases by 1.</p>
-      <p class="indent"><strong><em>Alignment.</em></strong> Most alithimar have a strong tendency toward lawful alignments, and a leaning toward good alignments.</p>
-      <p class="indent"><strong><em>Darkvision.</em></strong> Blessed with a radiant soul, you can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
+      <p class="indent"><strong><em>Alignment.</em></strong> Most alithimar have a strong tendency to lawful alignments, and a leaning toward good alignments.</p>
+      <p class="indent"><strong><em>Darkvision.</em></strong> Blessed with a radiant soul, you have superior vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
       <p class="indent"><strong><em>Strict Moral Code.</em></strong> You refuse to act contrary to your values and alignment. You have advantage on saving throws against being charmed or possessed.</p>
-      <p class="indent"><strong><em>Gathered to Battle.</em></strong> Your connection to the upper planes grants you proficiency in light and medium armor, and in two martial weapons of your choice.</p>
+      <p class="indent"><strong><em>Gathered to Battle.</em></strong> Your connection to the upper planes grants you proficiency in light and medium armor and in two martial weapons of your choice.</p>
       <p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Celestial and two other languages of your choice.</p>
     </description>
 
@@ -25,10 +25,10 @@
     <rules>
       <stat name="strength" value="2" />
       <stat name="constitution" value="1" />
+      <stat name="innate speed:walk" value="30" bonus="base" />
       <grant type="Vision" id="ID_VISION_DARKVISION" />
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_STRICT_MORAL_CODE" />
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_GATHERED_TO_BATTLE" />
-      <stat name="innate speed:walk" value="30" bonus="base" />
       <grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
       <select type="Language" name="Language (Alithimar)" supports="Standard||Exotic" number="2" />
     </rules>
@@ -39,21 +39,21 @@
       <p>You refuse to act contrary to your values and alignment. You have advantage on saving throws against being charmed or possessed.</p>
     </description>
     <sheet>
-      <description>Advantage on saves vs. charm and possession.</description>
+      <description>Advantage on saving throws against being charmed or possessed.</description>
     </sheet>
   </element>
 
   <element name="Gathered to Battle" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_GATHERED_TO_BATTLE">
     <description>
-      <p>Your connection to the upper planes grants you proficiency in light and medium armor, and in two martial weapons of your choice.</p>
+      <p>Your connection to the upper planes grants you proficiency in light and medium armor and in two martial weapons of your choice.</p>
     </description>
     <sheet>
-      <description>Proficiency in light armor, medium armor, and two martial weapons of your choice.</description>
+      <description>Proficiency in light and medium armor and two martial weapons of your choice.</description>
     </sheet>
     <rules>
-      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_LIGHT" />
-      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_MEDIUM" />
-      <select type="Proficiency" name="Martial Weapon Proficiency (Alithimar)" supports="Weapon.Martial" number="2" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_LIGHT_ARMOR" />
+      <grant type="Proficiency" id="ID_PROFICIENCY_ARMOR_PROFICIENCY_MEDIUM_ARMOR" />
+      <select type="Proficiency" name="Martial Weapon Proficiency (Alithimar)" supports="Weapon:Martial" number="2" />
     </rules>
   </element>
 
