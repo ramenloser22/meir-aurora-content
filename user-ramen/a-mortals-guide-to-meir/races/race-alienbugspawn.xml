@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <elements>
   <info>
     <name>Alien Bug Spawn</name>
@@ -63,9 +63,8 @@
       <p>When you damage a creature with a melee weapon attack or melee spell attack, you can cause the attack or spell to deal extra poison damage to the creature. The extra damage equals your level. Once you use this trait, you can't use it again until you finish a short or long rest.</p>
     </description>
     <sheet>
-      <description>Once per short rest, you can add poison damage equal to your level to one melee weapon or melee spell attack.</description>
+      <description>Once per short or long rest, you can add poison damage equal to your level to one melee weapon or melee spell attack.</description>
     </sheet>
-    </rules>
   </element>
 
 </elements>
