@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <elements>
   <info>
     <name>Alien Bug Spawn</name>
@@ -10,92 +10,73 @@
   <element name="Alien Bug Spawn" type="Race" source="A Mortal's Guide to Meir" id="ID_RACE_ALIEN_BUG_SPAWN">
     <description>
       <p class="flavor">The alien bugs are strange otherworldly creatures that seek to enslave and dominate all other life. An alien bug spawn inherits the alien bug's emotionless nature and some of their insect-like abilities.</p>
-
       <h4>ALIEN BUG SPAWN TRAITS</h4>
-      <p>Your alien bug spawn character has the following racial traits.</p>
+      <p>Your alien bug spawn character has the following traits.</p>
       <p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Dexterity score increases by 2, and your Charisma score increases by 1.</p>
       <p class="indent"><strong><em>Alignment.</em></strong> Alien bug spawn may or may not be evil, but they have a strong tendency toward lawful alignments.</p>
       <p class="indent"><strong><em>Darkvision.</em></strong> You have vision in dark and dim conditions. You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
       <p class="indent"><strong><em>Mental Fortitude.</em></strong> You have advantage on saving throws against being charmed or frightened, and magic can't put you to sleep.</p>
       <p class="indent"><strong><em>Spider Climb.</em></strong> You have a climbing speed equal to your walking speed.</p>
-      <p class="indent"><strong><em>Child of Slavers.</em></strong> At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for this spell. You can also cast this spell using any spell slots you have of the appropriate level.</p>
-      <p class="indent"><strong><em>Poisonous Touch.</em></strong> When you damage a creature with a melee attack or melee spell attack, you can cause the attack or spell to deal extra poison damage equal to your level. Once you use this trait, you can't use it again until you finish a short or long rest.</p>
+      <p class="indent"><strong><em>Child of Slavers.</em></strong> You can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for this spell. You can also cast this spell using any spell slots you have of the appropriate level.</p>
+      <p class="indent"><strong><em>Poisonous Touch.</em></strong> When you damage a creature with a melee weapon attack or melee spell attack, you can cause the attack or spell to deal extra poison damage to the creature. The extra damage equals your level. Once you use this trait, you can't use it again until you finish a short or long rest.</p>
       <p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write two languages of your choice.</p>
     </description>
 
     <sheet display="false" />
 
-    <setters>
-      <set name="height" modifier="2d10">5'0"</set>
-      <set name="weight" modifier="1d6">130 lb.</set>
-    </setters>
-
     <rules>
-      <!-- Ability Score Increases -->
       <stat name="dexterity" value="2" />
       <stat name="charisma" value="1" />
-
-      <!-- Speed -->
-      <stat name="innate speed" value="30" bonus="base" />
-      <stat name="climb speed" value="30" />
-
-      <!-- Size -->
-      <grant type="Size" id="ID_SIZE_MEDIUM" />
-
-      <!-- Vision -->
       <grant type="Vision" id="ID_VISION_DARKVISION" />
-
-      <!-- Languages -->
-      <select type="Language" name="Language (Alien Bug Spawn)" count="2" supports="Standard||Exotic" />
-
-      <!-- Racial Traits -->
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_MENTAL_FORTITUDE" />
+      <stat name="innate speed:climb" value="30" bonus="base" />
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_CHILD_OF_SLAVERS" />
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_POISONOUS_TOUCH" />
+      <select type="Language" name="Language (Alien Bug Spawn)" supports="Standard||Exotic" number="2" />
     </rules>
   </element>
 
-  <!-- Mental Fortitude Trait -->
   <element name="Mental Fortitude" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_MENTAL_FORTITUDE">
     <description>
       <p>You have advantage on saving throws against being charmed or frightened, and magic can't put you to sleep.</p>
     </description>
     <sheet>
-      <description>Advantage on saves vs. charm and fear; immune to magical sleep.</description>
+      <description>Advantage on saves vs. charm and fright; immune to magical sleep.</description>
     </sheet>
-    <rules>
-      <grant type="Save Advantage" id="ID_SAVING_THROW_CHARM" />
-      <grant type="Save Advantage" id="ID_SAVING_THROW_FRIGHTENED" />
-      <grant type="Immunity" id="ID_CONDITION_SLEEP" source="Magic" />
-    </rules>
   </element>
 
-  <!-- Child of Slavers Trait -->
   <element name="Child of Slavers" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_CHILD_OF_SLAVERS">
     <description>
-      <p>At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for this spell. You can also cast this spell using any spell slots you have of the appropriate level.</p>
+      <p>You can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for this spell. You can also cast this spell using any spell slots you have of the appropriate level.</p>
     </description>
     <sheet>
-      <description>You can cast <em>charm person</em> 1/long rest. (Charisma)</description>
-      <description level="3">You can cast <em>charm person</em> 1/long rest. (Charisma)</description>
+      <description>Cast <em>charm person</em> 1/long rest. Charisma is your spellcasting ability.</description>
     </sheet>
     <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" />
+      <grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="1" />
       <stat name="spellcasting.ability" value="charisma" />
     </rules>
   </element>
 
-  <!-- Poisonous Touch Trait -->
   <element name="Poisonous Touch" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_POISONOUS_TOUCH">
     <description>
-      <p>When you damage a creature with a melee attack or melee spell attack, you can cause the attack or spell to deal extra poison damage equal to your level. Once you use this trait, you can't use it again until you finish a short or long rest.</p>
+      <p>When you damage a creature with a melee weapon attack or melee spell attack, you can cause the attack or spell to deal extra poison damage to the creature. The extra damage equals your level. Once you use this trait, you can't use it again until you finish a short or long rest.</p>
     </description>
     <sheet>
-      <description>Deal extra poison damage equal to your level on melee attacks/spells once per rest.</description>
+      <description>Once per short rest, add poison damage equal to your level to one melee weapon or melee spell attack.</description>
     </sheet>
     <rules>
-      <effect type="Damage" damage_type="Poison" amount="level" />
-      <limit uses="1" reset="short rest" />
+      <trigger event="on hit">
+        <condition>
+          <or>
+            <condition>attack.type = "melee weapon"</condition>
+            <condition>attack.type = "melee spell"</condition>
+          </or>
+        </condition>
+        <limit uses="1" reset="short rest" />
+        <effect type="Damage" damage_type="Poison" amount="level" />
+      </trigger>
     </rules>
   </element>
+
 </elements>
