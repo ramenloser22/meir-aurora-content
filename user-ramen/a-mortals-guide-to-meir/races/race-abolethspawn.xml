@@ -17,7 +17,7 @@
 			<p class="indent"><strong><em>Age.</em></strong> Aboleth spawn mature at a similar rate to humans; their lifespan is comparable to humans as well.</p>
 			<p class="indent"><strong><em>Alignment.</em></strong> Aboleth spawn may or may not be evil, but they have a strong tendency toward lawful alignments.</p>
 			<p class="indent"><strong><em>Size.</em></strong> Aboleth spawn are about the same size as humans. Your size is Medium.</p>
-			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet. You also have a swimming speed equal to your walking speed.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
 			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
 			<p class="indent"><strong><em>Amphibious.</em></strong> You can breathe air and water.</p>
 			<p class="indent"><strong><em>Eternal Memory.</em></strong> You are proficient in History.</p>
@@ -39,7 +39,6 @@
 
 			<!-- Movement: walk + swim -->
 			<stat name="innate speed" value="30" bonus="base" />
-			<stat name="innate speed:swim" value="30" bonus="base" />
 
 			<!-- Size, Vision, Language -->
 			<grant type="Size" id="ID_SIZE_MEDIUM" />
