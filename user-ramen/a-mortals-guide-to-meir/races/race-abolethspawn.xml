@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Aboleth Spawn</name>
-		<update version="0.2">
+		<update version="0.3">
 			<file name="race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen/a-mortals-guide-to-meir/races/race-abolethspawn.xml" />
 		</update>
 	</info>
@@ -13,7 +13,7 @@
 
 			<h4>ABOLETH SPAWN TRAITS</h4>
 			<p>Your aboleth spawn character has the following traits.</p>
-			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence or Charisma score increases by 2, and your Strength score increases by 1.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Strength score increases by 1. Choose a subrace to determine which ability (Intelligence or Charisma) increases by 2.</p>
 			<p class="indent"><strong><em>Age.</em></strong> Aboleth spawn mature at a similar rate to humans; their lifespan is comparable to humans as well.</p>
 			<p class="indent"><strong><em>Alignment.</em></strong> Aboleth spawn may or may not be evil, but they have a strong tendency toward lawful alignments.</p>
 			<p class="indent"><strong><em>Size.</em></strong> Aboleth spawn are about the same size as humans. Your size is Medium.</p>
@@ -21,7 +21,7 @@
 			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
 			<p class="indent"><strong><em>Amphibious.</em></strong> You can breathe air and water.</p>
 			<p class="indent"><strong><em>Eternal Memory.</em></strong> You are proficient in History.</p>
-			<p class="indent"><strong><em>Aboleth Magic.</em></strong> At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Your spellcasting ability for this spell is the same ability you chose for your racial +2 bonus.</p>
+			<p class="indent"><strong><em>Aboleth Magic.</em></strong> At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Your Aboleth Magic spellcasting ability is set by the subrace you choose (see subrace options).</p>
 			<p class="indent"><strong><em>Telepathy.</em></strong> You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time.</p>
 			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and one other language of your choice.</p>
 		</description>
@@ -34,24 +34,71 @@
 		</setters>
 
 		<rules>
-			<select type="Ability" name="Aboleth Spawn Ability Choice" supports="Intelligence||Charisma" count="1" value="2" />
+			<!-- Base +1 Strength (subraces supply the +2) -->
 			<stat name="strength" value="1" />
 
+			<!-- Movement -->
 			<stat name="innate speed" value="30" bonus="base" />
 			<stat name="swim speed" value="30" />
 
+			<!-- Size, Vision, Language -->
 			<grant type="Size" id="ID_SIZE_MEDIUM" />
 			<grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" />
 			<grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<select type="Language" name="Language (Aboleth Spawn)" supports="Standard||Exotic" />
 
+			<!-- Racial traits (visible on sheet) -->
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_AMPHIBIOUS" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_ETERNAL_MEMORY" />
-			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_TELEPATHY" />
+
+			<!-- Subrace selector (chooses which +2 and which Aboleth Magic variant) -->
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_ABOLETH_SPAWN_SUBRACE" />
 		</rules>
 	</element>
 
+	<!-- Subrace selector trait -->
+	<element name="Aboleth Spawn Subrace" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_ABOLETH_SPAWN_SUBRACE">
+		<description>
+			<p>Choose one Aboleth Spawn subrace. This determines which ability increases by 2 and which Aboleth Magic variant you gain.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<select type="Sub Race" name="Aboleth Spawn Subrace" supports="Aboleth Spawn" />
+		</rules>
+	</element>
+
+	<!-- Subrace: Intelligence-focused -->
+	<element name="Aboleth Spawn (Intelligence)" type="Sub Race" source="A Mortal's Guide to Meir" id="ID_SUB_RACE_ABOLETHSPAWN_INT">
+		<supports>Aboleth Spawn</supports>
+		<description>
+			<p>As an Intelligence-focused aboleth spawn, your mind is the strongest legacy of your aboleth heritage.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 2.</p>
+			<p class="indent"><strong><em>Aboleth Magic.</em></strong> Intelligence is your spellcasting ability for Aboleth Magic.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="intelligence" value="2" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC_INT" />
+		</rules>
+	</element>
+
+	<!-- Subrace: Charisma-focused -->
+	<element name="Aboleth Spawn (Charisma)" type="Sub Race" source="A Mortal's Guide to Meir" id="ID_SUB_RACE_ABOLETHSPAWN_CHA">
+		<supports>Aboleth Spawn</supports>
+		<description>
+			<p>As a Charisma-focused aboleth spawn, you wear your primordial presence like a mask of command.</p>
+			<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Charisma score increases by 2.</p>
+			<p class="indent"><strong><em>Aboleth Magic.</em></strong> Charisma is your spellcasting ability for Aboleth Magic.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<stat name="charisma" value="2" />
+			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC_CHA" />
+		</rules>
+	</element>
+
+	<!-- Amphibious trait -->
 	<element name="Amphibious" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_AMPHIBIOUS">
 		<description>
 			<p>You can breathe air and water.</p>
@@ -61,6 +108,7 @@
 		</sheet>
 	</element>
 
+	<!-- Eternal Memory: History proficiency -->
 	<element name="Eternal Memory" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_ETERNAL_MEMORY">
 		<description>
 			<p>You are proficient in the History skill.</p>
@@ -73,21 +121,39 @@
 		</rules>
 	</element>
 
-	<element name="Aboleth Magic" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC">
+	<!-- Aboleth Magic (Intelligence variant) -->
+	<element name="Aboleth Magic (Intelligence)" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC_INT">
 		<description>
-			<p>At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Your spellcasting ability for this spell is the same ability you chose for your racial +2 bonus.</p>
+			<p>At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for this trait.</p>
 		</description>
 		<sheet>
-			<description>You can cast <em>charm person</em> 1/long rest. (Uses your racial +2 ability)</description>
-			<description level="3">You can cast <em>charm person</em> 1/long rest. (Uses your racial +2 ability)</description>
+			<description>You can cast <em>charm person</em> 1/long rest. (Intelligence)</description>
+			<description level="3">You can cast <em>charm person</em> 1/long rest. (Intelligence)</description>
 		</sheet>
 		<rules>
 			<grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" />
-			<!-- Reuse the race's ability choice -->
-			<depends on="Aboleth Spawn Ability Choice" />
+			<!-- attempt to set spellcasting ability so Aurora links the spell to Intelligence -->
+			<stat name="spellcasting.ability" value="intelligence" />
 		</rules>
 	</element>
 
+	<!-- Aboleth Magic (Charisma variant) -->
+	<element name="Aboleth Magic (Charisma)" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC_CHA">
+		<description>
+			<p>At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Charisma is your spellcasting ability for this trait.</p>
+		</description>
+		<sheet>
+			<description>You can cast <em>charm person</em> 1/long rest. (Charisma)</description>
+			<description level="3">You can cast <em>charm person</em> 1/long rest. (Charisma)</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" />
+			<!-- attempt to set spellcasting ability so Aurora links the spell to Charisma -->
+			<stat name="spellcasting.ability" value="charisma" />
+		</rules>
+	</element>
+
+	<!-- Telepathy -->
 	<element name="Telepathy (30 ft)" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_TELEPATHY">
 		<description>
 			<p>You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time.</p>
