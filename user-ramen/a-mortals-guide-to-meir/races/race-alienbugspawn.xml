@@ -1,9 +1,107 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <elements>
-  <race name="Alien Bug Spawn" source="MGtM">
+  <info>
+    <name>Alien Bug Spawn</name>
+  </info>
+
+  <element name="Alien Bug Spawn" type="Race" source="A Mortal's Guide to Meir" id="ID_RACE_ALIEN_BUG_SPAWN">
     <description>
-      <!-- Describe the Alien Bug Spawn race here -->
+      <p class="flavor">The alien bugs are strange otherworldly creatures that seek to enslave and dominate all other life. An alien bug spawn inherits the alien bug's emotionless nature and some of their insect-like abilities.</p>
+
+      <h4>ALIEN BUG SPAWN TRAITS</h4>
+      <p>Your alien bug spawn character has the following traits.</p>
+      <p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Dexterity score increases by 2, and your Charisma score increases by 1.</p>
+      <p class="indent"><strong><em>Alignment.</em></strong> Alien bug spawn may or may not be evil, but they have a strong tendency toward lawful alignments.</p>
+      <p class="indent"><strong><em>Size.</em></strong> Alien bug spawn are about the same size as humans. Your size is Medium.</p>
+      <p class="indent"><strong><em>Speed.</em></strong> Your base walking speed is 30 feet.</p>
+      <p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
+      <p class="indent"><strong><em>Mental Fortitude.</em></strong> You have advantage on saving throws against being charmed or frightened, and magic can't put you to sleep.</p>
+      <p class="indent"><strong><em>Spider Climb.</em></strong> You have a climbing speed equal to your walking speed.</p>
+      <p class="indent"><strong><em>Child of Slavers.</em></strong> At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for this spell. You can also cast this spell using any spell slots you have of the appropriate level.</p>
+      <p class="indent"><strong><em>Poisonous Touch.</em></strong> When you damage a creature with a melee attack or melee spell attack, you can cause the attack or spell to deal extra poison damage equal to your level. Once you use this trait, you can't use it again until you finish a short or long rest.</p>
+      <p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write two languages of your choice.</p>
     </description>
-    <!-- Add traits, ability score increases, and other features here -->
-  </race>
+
+    <sheet display="false" />
+
+    <setters>
+      <set name="height" modifier="2d10">5'0"</set>
+      <set name="weight" modifier="1d6">120 lb.</set>
+    </setters>
+
+    <rules>
+      <!-- Ability Score Increase -->
+      <stat name="dexterity" value="2" />
+      <stat name="charisma" value="1" />
+
+      <!-- Speed -->
+      <stat name="innate speed" value="30" bonus="base" />
+
+      <!-- Size and Vision -->
+      <grant type="Size" id="ID_SIZE_MEDIUM" />
+      <grant type="Vision" id="ID_VISION_DARKVISION" />
+
+      <!-- Languages -->
+      <grant type="Language" id="ID_LANGUAGE_COMMON" />
+      <select type="Language" name="Language (Alien Bug Spawn)" supports="Standard||Exotic" count="1" />
+
+      <!-- Traits -->
+      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_MENTAL_FORTITUDE" />
+      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_SPIDER_CLIMB" />
+      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_CHILD_OF_SLAVERS" />
+      <grant type="Racial Trait" id="ID_RACIAL_TRAIT_POISONOUS_TOUCH" />
+    </rules>
+  </element>
+
+  <!-- Mental Fortitude -->
+  <element name="Mental Fortitude" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_MENTAL_FORTITUDE">
+    <description>
+      <p>You have advantage on saving throws against being charmed or frightened, and magic can't put you to sleep.</p>
+    </description>
+    <sheet display="false">
+      <description>Advantage on saving throws vs. charm and fear; immune to magical sleep.</description>
+    </sheet>
+    <rules>
+      <grant type="Advantage" id="ID_SAVING_THROW_CHARM" />
+      <grant type="Advantage" id="ID_SAVING_THROW_FRIGHTENED" />
+      <grant type="Condition Immunity" id="ID_CONDITION_SLEEP" />
+    </rules>
+  </element>
+
+  <!-- Spider Climb -->
+  <element name="Spider Climb" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_SPIDER_CLIMB">
+    <description>
+      <p>You have a climbing speed equal to your walking speed.</p>
+    </description>
+    <sheet display="false">
+      <description>Climbing speed = walking speed.</description>
+    </sheet>
+    <rules>
+      <stat name="climb speed" value="30" />
+    </rules>
+  </element>
+
+  <!-- Child of Slavers (charm person) -->
+  <element name="Child of Slavers" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_CHILD_OF_SLAVERS">
+    <description>
+      <p>At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for this spell. You can also cast this spell using any spell slots you have of the appropriate level.</p>
+    </description>
+    <sheet>
+      <description>You can cast <em>charm person</em> 1/long rest. (Charisma)</description>
+      <description level="3">You can cast <em>charm person</em> 1/long rest. (Charisma)</description>
+    </sheet>
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" />
+    </rules>
+  </element>
+
+  <!-- Poisonous Touch -->
+  <element name="Poisonous Touch" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_POISONOUS_TOUCH">
+    <description>
+      <p>When you damage a creature with a melee attack or melee spell attack, you can cause the attack or spell to deal extra poison damage equal to your level. Once you use this trait, you can't use it again until you finish a short or long rest.</p>
+    </description>
+    <sheet display="false">
+      <description>Extra poison damage = your level, recharge short/long rest.</description>
+    </sheet>
+  </element>
 </elements>
