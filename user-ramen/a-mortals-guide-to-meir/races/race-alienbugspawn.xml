@@ -63,19 +63,8 @@
       <p>When you damage a creature with a melee weapon attack or melee spell attack, you can cause the attack or spell to deal extra poison damage to the creature. The extra damage equals your level. Once you use this trait, you can't use it again until you finish a short or long rest.</p>
     </description>
     <sheet>
-      <description>Once per short rest, add poison damage equal to your level to one melee weapon or melee spell attack.</description>
+      <description>Once per short rest, you can add poison damage equal to your level to one melee weapon or melee spell attack.</description>
     </sheet>
-    <rules>
-      <trigger event="on hit">
-        <condition>
-          <or>
-            <condition>attack.type = "melee weapon"</condition>
-            <condition>attack.type = "melee spell"</condition>
-          </or>
-        </condition>
-        <limit uses="1" reset="short rest" />
-        <effect type="Damage" damage_type="Poison" amount="level" />
-      </trigger>
     </rules>
   </element>
 
