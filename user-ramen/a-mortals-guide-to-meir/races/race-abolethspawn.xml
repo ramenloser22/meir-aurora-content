@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8"?>
 <elements>
 	<info>
 		<name>Aboleth Spawn</name>
-		<update version="0.1">
+		<update version="0.2">
 			<file name="race-abolethspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen/a-mortals-guide-to-meir/races/race-abolethspawn.xml" />
 		</update>
 	</info>
@@ -21,7 +21,7 @@
 			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
 			<p class="indent"><strong><em>Amphibious.</em></strong> You can breathe air and water.</p>
 			<p class="indent"><strong><em>Eternal Memory.</em></strong> You are proficient in History.</p>
-			<p class="indent"><strong><em>Aboleth Magic.</em></strong> At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Intelligence or Charisma is your spellcasting ability for this spell (choose when you select this race).</p>
+			<p class="indent"><strong><em>Aboleth Magic.</em></strong> At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Your spellcasting ability for this spell is the same ability you chose for your racial +2 bonus.</p>
 			<p class="indent"><strong><em>Telepathy.</em></strong> You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time.</p>
 			<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Common and one other language of your choice.</p>
 		</description>
@@ -29,28 +29,22 @@
 		<sheet display="false" />
 
 		<setters>
-			<!-- optional: adjust as you like -->
 			<set name="height" modifier="2d10">4'11"</set>
 			<set name="weight" modifier="1d6">120 lb.</set>
 		</setters>
 
 		<rules>
-			<!-- Ability Score Increase: choose BETWEEN Intelligence or Charisma for +2 -->
-			<select type="Ability" name="Ability Score Increase (Aboleth Spawn)" supports="Intelligence||Charisma" count="1" />
-			<!-- applied +2 to the chosen ability via the select; give Strength +1 -->
+			<select type="Ability" name="Aboleth Spawn Ability Choice" supports="Intelligence||Charisma" count="1" value="2" />
 			<stat name="strength" value="1" />
 
-			<!-- Speed -->
 			<stat name="innate speed" value="30" bonus="base" />
 			<stat name="swim speed" value="30" />
 
-			<!-- Size, Vision, Languages -->
 			<grant type="Size" id="ID_SIZE_MEDIUM" />
 			<grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" />
 			<grant type="Language" id="ID_LANGUAGE_COMMON" />
 			<select type="Language" name="Language (Aboleth Spawn)" supports="Standard||Exotic" />
 
-			<!-- Racial traits (defined below) -->
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_AMPHIBIOUS" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_ETERNAL_MEMORY" />
 			<grant type="Racial Trait" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC" />
@@ -58,22 +52,20 @@
 		</rules>
 	</element>
 
-	<!-- Amphibious trait -->
 	<element name="Amphibious" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_AMPHIBIOUS">
 		<description>
 			<p>You can breathe air and water.</p>
 		</description>
-		<sheet display="false">
+		<sheet>
 			<description>You can breathe air and water.</description>
 		</sheet>
 	</element>
 
-	<!-- Eternal Memory: History proficiency -->
 	<element name="Eternal Memory" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_ETERNAL_MEMORY">
 		<description>
 			<p>You are proficient in the History skill.</p>
 		</description>
-		<sheet display="false">
+		<sheet>
 			<description>Proficiency in History.</description>
 		</sheet>
 		<rules>
@@ -81,29 +73,26 @@
 		</rules>
 	</element>
 
-	<!-- Aboleth Magic: Charm Person at 3rd level -->
 	<element name="Aboleth Magic" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_ABOLETH_MAGIC">
 		<description>
-			<p>At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Intelligence or Charisma is your spellcasting ability for this trait (choose when you select this race).</p>
+			<p>At 3rd level, you can cast <em>charm person</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Your spellcasting ability for this spell is the same ability you chose for your racial +2 bonus.</p>
 		</description>
 		<sheet>
-			<description>You can cast <em>charm person</em> 1/long rest. (Intelligence or Charisma)</description>
-			<description level="3">You can cast <em>charm person</em> 1/long rest. (Intelligence or Charisma)</description>
+			<description>You can cast <em>charm person</em> 1/long rest. (Uses your racial +2 ability)</description>
+			<description level="3">You can cast <em>charm person</em> 1/long rest. (Uses your racial +2 ability)</description>
 		</sheet>
 		<rules>
-			<!-- grant the spell at character level 3 -->
 			<grant type="Spell" id="ID_PHB_SPELL_CHARM_PERSON" level="3" />
-			<!-- let the user choose Intelligence or Charisma as the spellcasting ability -->
-			<select type="Ability" name="Aboleth Magic Spellcasting Ability" supports="Intelligence||Charisma" count="1" />
+			<!-- Reuse the race's ability choice -->
+			<depends on="Aboleth Spawn Ability Choice" />
 		</rules>
 	</element>
 
-	<!-- Telepathy -->
 	<element name="Telepathy (30 ft)" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_TELEPATHY">
 		<description>
 			<p>You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time.</p>
 		</description>
-		<sheet display="false">
+		<sheet>
 			<description>Telepathy — communicate telepathically within 30 feet (one creature at a time).</description>
 		</sheet>
 	</element>
