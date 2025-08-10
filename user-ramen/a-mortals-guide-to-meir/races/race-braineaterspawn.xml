@@ -1,9 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
-  <race name="Brain Eater Spawn" source="MGtM">
-    <description>
-      <!-- Describe the Brain Eater Spawn race here -->
-    </description>
-    <!-- Add traits, ability score increases, and other features here -->
-  </race>
+<info>
+<name>Brain Eater Spawn</name>
+<update version="1.0">
+<file name="race-braineaterspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen/a-mortals-guide-to-meir/races/race-braineaterspawn.xml" />
+</update>
+</info>
+
+<!-- Main Race -->
+<element name="Brain Eater Spawn" type="Race" source="A Mortal's Guide to Meir" id="ID_RACE_BRAIN_EATER_SPAWN">
+    <description><![CDATA[
+<p class="flavor">The alien brain eaters prey on other creatures using mental manipulation. A brain eater spawn has a limited version of the brain eater's psionic prowess, which they can use for good or for ill.</p>
+
+<h4>BRAIN EATER SPAWN TRAITS</h4>
+<p>Your brain eater spawn character has the following traits.</p>
+
+<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 2, and your Charisma score increases by 1.</p>
+<p class="indent"><strong><em>Alignment.</em></strong> Brain eater spawn may or may not be evil, but they have a strong tendency toward lawful alignments.</p>
+<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
+<p class="indent"><strong><em>Creature of the Mind.</em></strong> You have proficiency in Insight and Deception.</p>
+<p class="indent"><strong><em>Psionics.</em></strong> At 3rd level, you can cast <em>detect thoughts</em> or <em>levitate</em> (as a 2nd-level spell) once with this trait and regain the ability to do so when you finish a long rest. You can also cast either spell using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</p>
+<p class="indent"><strong><em>Telepathy.</em></strong> You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time.</p>
+<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write two languages of your choice.</p>
+    ]]></description>
+
+    <sheet display="false" />
+
+    <rules>
+        <!-- Ability Scores -->
+        <stat name="intelligence" value="2" />
+        <stat name="charisma" value="1" />
+
+        <!-- Size & Speed -->
+        <grant type="Size" id="ID_SIZE_MEDIUM" />
+        <stat name="innate speed" value="30" bonus="base" />
+
+        <!-- Vision -->
+        <grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" />
+
+        <!-- Racial Traits -->
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_CREATURE_OF_THE_MIND" />
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_PSIONICS_BESPAWN" />
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_TELEPATHY_30FT" />
+
+        <!-- Languages -->
+        <select type="Language" name="Language (Brain Eater Spawn)" supports="Standard||Exotic" number="2" />
+    </rules>
+</element>
+
+<!-- Trait: Creature of the Mind -->
+<element name="Creature of the Mind" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_CREATURE_OF_THE_MIND">
+    <description><![CDATA[
+<p>You have proficiency in Insight and Deception.</p>
+    ]]></description>
+    <sheet>
+        <description>Proficiency in Insight and Deception.</description>
+    </sheet>
+    <rules>
+        <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+        <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_DECEPTION" />
+    </rules>
+</element>
+
+<!-- Trait: Psionics -->
+<element name="Psionics" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_PSIONICS_BESPAWN">
+    <description><![CDATA[
+<p>At 3rd level, you can cast <em>detect thoughts</em> or <em>levitate</em> (as a 2nd-level spell) once with this trait and regain the ability to do so when you finish a long rest. You can also cast either spell using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for these spells.</p>
+    ]]></description>
+    <sheet>
+        <description level="3">You can cast <em>detect thoughts</em> or <em>levitate</em> (2nd-level) 1/long rest. (Intelligence)</description>
+    </sheet>
+    <rules>
+        <grant type="Spell" id="ID_PHB_SPELL_DETECT_THOUGHTS" level="3" />
+        <grant type="Spell" id="ID_PHB_SPELL_LEVITATE" level="3" />
+        <stat name="spellcasting.ability" value="intelligence" />
+    </rules>
+</element>
+
+<!-- Trait: Telepathy -->
+<element name="Telepathy (30 ft)" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_TELEPATHY_30FT">
+    <description><![CDATA[
+<p>You can speak telepathically to any creature within 30 feet of you. The creature understands you only if the two of you share a language. You can speak telepathically in this way to one creature at a time.</p>
+    ]]></description>
+    <sheet>
+        <description>Telepathy — communicate telepathically within 30 feet (one creature at a time).</description>
+    </sheet>
+</element>
 </elements>
