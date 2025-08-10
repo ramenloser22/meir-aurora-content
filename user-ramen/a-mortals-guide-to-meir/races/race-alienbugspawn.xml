@@ -2,7 +2,7 @@
 <elements>
   <info>
     <name>Alien Bug Spawn</name>
-    <update version="0.1">
+    <update version="0.2">
       <file name="race-alienbugspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen/a-mortals-guide-to-meir/races/race-alienbugspawn.xml" />
     </update>
   </info>
@@ -27,9 +27,10 @@
     <rules>
       <stat name="dexterity" value="2" />
       <stat name="charisma" value="1" />
+      <stat name="innate speed:walk" value="30" bonus="base" />
+      <stat name="innate speed:climb" value="30" bonus="base" />
       <grant type="Vision" id="ID_VISION_DARKVISION" />
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_MENTAL_FORTITUDE" />
-      <stat name="innate speed:climb" value="30" bonus="base" />
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_CHILD_OF_SLAVERS" />
       <grant type="Racial Trait" id="ID_RACIAL_TRAIT_POISONOUS_TOUCH" />
       <select type="Language" name="Language (Alien Bug Spawn)" supports="Standard||Exotic" number="2" />
