@@ -1,9 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
-  <race name="Douleimar" source="MGtM">
-    <description>
-      <!-- Describe the Douleimar race here -->
-    </description>
-    <!-- Add traits, ability score increases, and other features here -->
-  </race>
+<info>
+<name>Douleimar</name>
+<update version="1.0">
+<file name="race-douleimar.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen/a-mortals-guide-to-meir/races/race-douleimar.xml" />
+</update>
+</info>
+
+<!-- Main Race -->
+<element name="Douleimar" type="Race" source="A Mortal's Guide to Meir" id="ID_RACE_DOULEIMAR">
+    <description><![CDATA[
+<p class="flavor">The douleimar represents the intelligence and creativity of the dual realm of peace and labor. They are skilled craftsmen and are blessed with a little magic.</p>
+
+<h4>DOULEIMAR TRAITS</h4>
+<p>Your douleimar character has the following racial traits.</p>
+
+<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Intelligence score increases by 2, and your Dexterity score increases by 1.</p>
+<p class="indent"><strong><em>Alignment.</em></strong> Douleimar have a strong tendency to good alignments, and an inclination toward lawful alignments.</p>
+<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
+<p class="indent"><strong><em>Heavenly Talent.</em></strong> You gain proficiency in an artisan tool of your choice. Your proficiency bonus is doubled for any ability checks that use this tool proficiency.</p>
+<p class="indent"><strong><em>The Magic of Hard Work.</em></strong> You know the <em>mending</em> cantrip. Intelligence is your spellcasting ability for it.</p>
+<p class="indent"><strong><em>Heavenly Duality.</em></strong> Starting at 3rd level, you can cast <em>mirror image</em> once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for this spell. You can also cast this spell using any spell slots you have of the appropriate level.</p>
+<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write Celestial and one other language of your choice.</p>
+    ]]></description>
+
+    <sheet display="false" />
+
+    <rules>
+        <!-- Ability Scores -->
+        <stat name="intelligence" value="2" />
+        <stat name="dexterity" value="1" />
+
+        <!-- Size & Speed -->
+        <grant type="Size" id="ID_SIZE_MEDIUM" />
+        <stat name="innate speed" value="30" bonus="base" />
+
+        <!-- Vision -->
+        <grant type="Vision" id="ID_VISION_DARKVISION" />
+
+        <!-- Traits -->
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_HEAVENLY_TALENT" />
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_MAGIC_OF_HARD_WORK" />
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_HEAVENLY_DUALITY" />
+
+        <!-- Languages -->
+        <grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
+        <select type="Language" name="Language (Douleimar)" supports="Standard||Exotic" number="1" />
+    </rules>
+</element>
+
+<!-- Trait: Heavenly Talent -->
+<element name="Heavenly Talent" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_HEAVENLY_TALENT">
+    <description><![CDATA[
+<p>You gain proficiency in an artisan tool of your choice. Your proficiency bonus is doubled for any ability checks that use this tool proficiency.</p>
+    ]]></description>
+    <sheet>
+        <description>Proficiency in one artisan tool of your choice; double proficiency bonus for checks using it.</description>
+    </sheet>
+    <rules>
+        <select type="Proficiency" name="Artisan Tool (Douleimar)" supports="Artisan Tool" number="1" />
+        <!-- Tool Expertise -->
+        <stat name="proficiency.double" value="Artisan Tool" />
+    </rules>
+</element>
+
+<!-- Trait: The Magic of Hard Work -->
+<element name="The Magic of Hard Work" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_MAGIC_OF_HARD_WORK">
+    <description><![CDATA[
+<p>You know the <em>mending</em> cantrip. Intelligence is your spellcasting ability for it.</p>
+    ]]></description>
+    <sheet>
+        <description>Know <em>mending</em> cantrip (Intelligence).</description>
+    </sheet>
+    <rules>
+        <grant type="Spell" id="ID_PHB_SPELL_MENDING" />
+        <stat name="spellcasting.ability" value="intelligence" />
+    </rules>
+</element>
+
+<!-- Trait: Heavenly Duality -->
+<element name="Heavenly Duality" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_HEAVENLY_DUALITY">
+    <description><![CDATA[
+<p>Starting at 3rd level, you can cast <em>mirror image</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for this spell.</p>
+    ]]></description>
+    <sheet>
+        <description level="3">Cast <em>mirror image</em> 1/long rest (Intelligence).</description>
+    </sheet>
+    <rules>
+        <grant type="Spell" id="ID_PHB_SPELL_MIRROR_IMAGE" level="3" />
+        <stat name="spellcasting.ability" value="intelligence" />
+    </rules>
+</element>
 </elements>
