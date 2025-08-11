@@ -1,9 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <elements>
-  <race name="Cursed Arcanist Spawn" source="MGtM">
-    <description>
-      <!-- Describe the Cursed Arcanist Spawn race here -->
-    </description>
-    <!-- Add traits, ability score increases, and other features here -->
-  </race>
+<info>
+<name>Cursed Arcanist Spawn</name>
+<update version="1.0">
+<file name="race-cursedarcanistspawn.xml" url="https://raw.githubusercontent.com/ramenloser22/meir-aurora-content/main/user-ramen/a-mortals-guide-to-meir/races/race-cursedarcanistspawn.xml" />
+</update>
+</info>
+
+<!-- Main Race -->
+<element name="Cursed Arcanist Spawn" type="Race" source="A Mortal's Guide to Meir" id="ID_RACE_CURSED_ARCANIST_SPAWN">
+    <description><![CDATA[
+<p class="flavor">A cursed arcanist spawn carries a portion of the madness of the cursed arcanist: an overwhelming desire to seek out the arcane. They also inherit some of the knowledge of the cursed arcanist, being able to sense things that others cannot.</p>
+
+<h4>CURSED ARCANIST SPAWN TRAITS</h4>
+<p>Your cursed arcanist spawn character has the following racial traits.</p>
+
+<p class="indent"><strong><em>Ability Score Increase.</em></strong> Your Constitution score increases by 2, and your Dexterity score increases by 1.</p>
+<p class="indent"><strong><em>Alignment.</em></strong> Cursed arcanist spawn may or may not be evil, but they have a strong tendency toward neutral alignments.</p>
+<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 120 feet of you as if it were bright light, and in darkness as if it were dim light. You can't discern color in darkness, only shades of gray.</p>
+<p class="indent"><strong><em>Limited Truesight.</em></strong> You have advantage on Intelligence (Investigation) checks to detect visual illusions and on saving throws against illusions. When you make an attack roll against a creature that is invisible, the invisibility does not impose disadvantage on the attack roll.</p>
+<p class="indent"><strong><em>Weird Insight.</em></strong> You have proficiency in Insight. Starting at 5th level, you can cast <em>detect thoughts</em> once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for this spell. You can also cast this spell using any spell slots you have of the appropriate level.</p>
+<p class="indent"><strong><em>Drawn to the Arcane.</em></strong> You have proficiency in Arcana. Starting at 3rd level, you can cast <em>detect magic</em> once with this trait and regain the ability to do so when you finish a long rest. Intelligence is your spellcasting ability for this spell. You can also cast this spell using any spell slots you have of the appropriate level.</p>
+<p class="indent"><strong><em>Languages.</em></strong> You can speak, read, and write two languages of your choice.</p>
+    ]]></description>
+
+    <sheet display="false" />
+
+    <rules>
+        <stat name="constitution" value="2" />
+        <stat name="dexterity" value="1" />
+
+        <grant type="Size" id="ID_SIZE_MEDIUM" />
+        <stat name="innate speed" value="30" bonus="base" />
+
+        <grant type="Vision" id="ID_VISION_SUPERIORDARKVISION" />
+
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_LIMITED_TRUESIGHT" />
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_WEIRD_INSIGHT" />
+        <grant type="Racial Trait" id="ID_RACIAL_TRAIT_DRAWN_TO_THE_ARCANE" />
+
+        <select type="Language" name="Language (Cursed Arcanist Spawn)" supports="Standard||Exotic" number="2" />
+    </rules>
+</element>
+
+<!-- Trait: Limited Truesight -->
+<element name="Limited Truesight" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_LIMITED_TRUESIGHT">
+    <description><![CDATA[
+<p>You have advantage on Intelligence (Investigation) checks to detect visual illusions and on saving throws against illusions. When you make an attack roll against a creature that is invisible, the invisibility does not impose disadvantage on the attack roll.</p>
+    ]]></description>
+    <sheet>
+        <description>Advantage on Investigation and saves vs. illusions; ignore disadvantage when attacking invisible creatures.</description>
+    </sheet>
+</element>
+
+<!-- Trait: Weird Insight -->
+<element name="Weird Insight" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_WEIRD_INSIGHT">
+    <description><![CDATA[
+<p>You have proficiency in Insight. Starting at 5th level, you can cast <em>detect thoughts</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for this spell.</p>
+    ]]></description>
+    <sheet>
+        <description>Insight proficiency; at 5th level, detect thoughts 1/long rest (Intelligence).</description>
+    </sheet>
+    <rules>
+        <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_INSIGHT" />
+        <grant type="Spell" id="ID_PHB_SPELL_DETECT_THOUGHTS" level="5" />
+        <stat name="spellcasting.ability" value="intelligence" />
+    </rules>
+</element>
+
+<!-- Trait: Drawn to the Arcane -->
+<element name="Drawn to the Arcane" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_DRAWN_TO_THE_ARCANE">
+    <description><![CDATA[
+<p>You have proficiency in Arcana. Starting at 3rd level, you can cast <em>detect magic</em> once with this trait and regain the ability to do so when you finish a long rest. You can also cast this spell using any spell slots you have of the appropriate level. Intelligence is your spellcasting ability for this spell.</p>
+    ]]></description>
+    <sheet>
+        <description>Arcana proficiency; at 3rd level, detect magic 1/long rest (Intelligence).</description>
+    </sheet>
+    <rules>
+        <grant type="Proficiency" id="ID_PROFICIENCY_SKILL_ARCANA" />
+        <grant type="Spell" id="ID_PHB_SPELL_DETECT_MAGIC" level="3" />
+        <stat name="spellcasting.ability" value="intelligence" />
+    </rules>
+</element>
 </elements>
