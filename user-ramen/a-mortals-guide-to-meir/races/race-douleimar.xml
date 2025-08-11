@@ -27,23 +27,18 @@
     <sheet display="false" />
 
     <rules>
-        <!-- Ability Scores -->
         <stat name="intelligence" value="2" />
         <stat name="dexterity" value="1" />
 
-        <!-- Size & Speed -->
         <grant type="Size" id="ID_SIZE_MEDIUM" />
         <stat name="innate speed" value="30" bonus="base" />
 
-        <!-- Vision -->
         <grant type="Vision" id="ID_VISION_DARKVISION" />
 
-        <!-- Traits -->
         <grant type="Racial Trait" id="ID_RACIAL_TRAIT_HEAVENLY_TALENT" />
         <grant type="Racial Trait" id="ID_RACIAL_TRAIT_MAGIC_OF_HARD_WORK" />
         <grant type="Racial Trait" id="ID_RACIAL_TRAIT_HEAVENLY_DUALITY" />
 
-        <!-- Languages -->
         <grant type="Language" id="ID_LANGUAGE_CELESTIAL" />
         <select type="Language" name="Language (Douleimar)" supports="Standard||Exotic" number="1" />
     </rules>
@@ -52,15 +47,174 @@
 <!-- Trait: Heavenly Talent -->
 <element name="Heavenly Talent" type="Racial Trait" source="A Mortal's Guide to Meir" id="ID_RACIAL_TRAIT_HEAVENLY_TALENT">
     <description><![CDATA[
-<p>You gain proficiency in an artisan tool of your choice. Your proficiency bonus is doubled for any ability checks that use this tool proficiency.</p>
+<p>You gain proficiency in an artisan’s tool of your choice. Your proficiency bonus is doubled for any ability checks you make with that tool.</p>
     ]]></description>
     <sheet>
-        <description>Proficiency in one artisan tool of your choice; double proficiency bonus for checks using it.</description>
+        <description>Proficiency in one artisan’s tool of your choice; double proficiency bonus for checks using it.</description>
     </sheet>
     <rules>
-        <select type="Proficiency" name="Artisan Tool (Douleimar)" supports="Artisan Tool" number="1" />
-        <!-- Tool Expertise -->
-        <stat name="proficiency.double" value="Artisan Tool" />
+        <select 
+            type="Proficiency" 
+            name="Heavenly Talent Tool Proficiency" 
+            supports="ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_BREWERS_SUPPLIES|ID_PROFICIENCY_TOOL_PROFICIENCY_MASONS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_LEATHERWORKERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES|ID_PROFICIENCY_TOOL_PROFICIENCY_POTTERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_CARPENTERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_JEWELERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_GLASBLOWERS_TOOLS|ID_PROFICIENCY_TOOL_PROFICIENCY_PAINTERS_SUPPLIES|ID_PROFICIENCY_TOOL_PROFICIENCY_WEAVERS_TOOLS" 
+            number="1" />
+    </rules>
+</element>
+
+<!-- Tool Expertise Elements for Heavenly Talent -->
+<element name="Tool Expertise (Smith's Tools)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_SMITHS_TOOLS_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_SMITHS_TOOLS</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Smith’s Tools check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="smith's tools:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Brewer's Supplies)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_BREWERS_SUPPLIES_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_BREWERS_SUPPLIES</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Brewer’s Supplies check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="brewer's supplies:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Mason's Tools)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_MASONS_TOOLS_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_MASONS_TOOLS</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Mason’s Tools check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="mason's tools:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Tinker's Tools)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_TINKERS_TOOLS_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_TINKERS_TOOLS</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Tinker’s Tools check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="tinker's tools:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Leatherworker's Tools)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_LEATHERWORKERS_TOOLS_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_LEATHERWORKERS_TOOLS</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Leatherworker’s Tools check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="leatherworker's tools:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Cartographer's Tools)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_CARTOGRAPHERS_TOOLS_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_CARTOGRAPHERS_TOOLS</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Cartographer’s Tools check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="cartographer's tools:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Calligrapher's Supplies)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_CALLIGRAPHERS_SUPPLIES_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_CALLIGRAPHERS_SUPPLIES</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Calligrapher’s Supplies check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="calligrapher's supplies:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Potter's Tools)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_POTTERS_TOOLS_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_POTTERS_TOOLS</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Potter’s Tools check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="potter's tools:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Carpenter's Tools)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_CARPENTERS_TOOLS_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_CARPENTERS_TOOLS</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Carpenter’s Tools check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="carpenter's tools:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Jeweler's Tools)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_JEWELERS_TOOLS_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_JEWELERS_TOOLS</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Jeweler’s Tools check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="jeweler's tools:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Glassblower's Tools)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_GLASBLOWERS_TOOLS_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_GLASBLOWERS_TOOLS</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Glassblower’s Tools check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="glassblower's tools:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Painter's Supplies)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_PAINTERS_SUPPLIES_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_PAINTERS_SUPPLIES</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Painter’s Supplies check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="painter's supplies:proficiency" value="proficiency" bonus="double" />
+    </rules>
+</element>
+
+<element name="Tool Expertise (Weaver's Tools)" type="Class Feature" source="A Mortal's Guide to Meir" id="ID_EXPERTISE_TOOL_WEAVERS_TOOLS_DOULEIMAR">
+    <supports>Expertise, Tool, ID_INTERNAL_SUPPORT_EXPERTISE</supports>
+    <requirements>ID_PROFICIENCY_TOOL_PROFICIENCY_WEAVERS_TOOLS</requirements>
+    <description><![CDATA[
+<p>Your proficiency bonus is doubled for any Weaver’s Tools check you make.</p>
+    ]]></description>
+    <sheet display="false" />
+    <rules>
+        <stat name="weaver's tools:proficiency" value="proficiency" bonus="double" />
     </rules>
 </element>
 
